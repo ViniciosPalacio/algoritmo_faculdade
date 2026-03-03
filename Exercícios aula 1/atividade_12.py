@@ -1,0 +1,5 @@
+n1 = float(input("adicione um nûmero: "))
+n2 =float(input("adicione outro nûmero: "))
+n3 = float(input("adicione o ultimo nûmero: "))
+maior = max(n1, n2, n3)
+print(f"o maior nûmero é o {maior}")

@@ -82,3 +82,40 @@ def compara_listas(lista1, lista2):
 l1 = [1, 2, 3]
 l2 = [3, 2, 1]
 print(compara_listas(l1, l2))
+# atividade 18
+# Crie uma lista de 10 números aleatórios e ordene apenas os pares [cite: 19]
+import random
+
+lista_aleatoria = []
+for _ in range(10):
+    lista_aleatoria.append(random.randint(1, 50))
+
+pares_ordenados = []
+for i in lista_aleatoria:
+    if i % 2 == 0:
+        pares_ordenados.append(i)
+
+pares_ordenados.sort()
+print(f"Lista completa: {lista_aleatoria}")
+print(f"Apenas os pares ordenados: {pares_ordenados}")
+
+# atividade 19
+# Remova da lista numeros os menores que 5 sem criar nova lista 
+# O truque aqui é varrer a lista de trás para frente. 
+# Se remover de frente para trás, os índices mudam e o loop quebra.
+for i in range(len(numeros) - 1, -1, -1):
+    if numeros[i] < 5:
+        numeros.pop(i)
+print(numeros)
+
+# atividade 20
+# Função que retorna soma acumulada [cite: 21]
+def soma_acumulada(lista_num):
+    nova_lista = []
+    soma = 0
+    for n in lista_num:
+        soma += n
+        nova_lista.append(soma)
+    return nova_lista
+
+print(soma_acumulada([1, 2, 3]))

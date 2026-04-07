@@ -1,5 +1,3 @@
-# Exercícios de Revisão - Corrigido
-
 # =============================================
 # Exercício 1 - Estoque de Produtos
 # =============================================
@@ -7,13 +5,12 @@ estoque1 = ["Notebook", "Mouse", "Teclado"]
 
 def adicionar_produto(lista, produto):
     if produto not in lista:
-        # BUG CORRIGIDO: append usa parênteses, não colchetes
         lista.append(produto)
     print("Estoque atual:", lista)
 
-adicionar_produto("Monitor", estoque1)
-adicionar_produto("Mouse", estoque1)
-
+# BUG CORRIGIDO: Ordem dos parâmetros invertida (Lista primeiro, Produto depois)
+adicionar_produto(estoque1, "Monitor")
+adicionar_produto(estoque1, "Mouse")
 
 # =============================================
 # Exercício 2 - Cadastro de Alunos
